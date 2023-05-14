@@ -1,0 +1,844 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    height: 10%;
+    background-color: burlywood;
+}
+.header__nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 30px;
+}
+.title,
+.name_header-motorBike {
+    list-style: none;
+}
+.title-list
+{
+    display: inline-block;
+}
+.title-list-link {
+    color: var(--text-color);
+}
+.title-list,
+.title-list-link {
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+.header-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 15px;
+}
+.header-list--node {
+    padding: 0 15px;
+    margin-left: -20px;
+}
+.header-list--item {
+    font-size: 10px;
+}
+a.account {
+    color: #333;
+}
+.hover-list:hover {
+    color: rgb(12, 5, 13);
+    cursor: pointer;
+}
+
+/* logo */
+.header-logo {
+    display: flex;
+    align-items: center ;
+}
+.img-logo {
+    width: 160%;
+    height: auto;
+}
+
+.header__menu {
+    position: relative;
+    position: absolute; 
+    right: 0px;
+}
+.fa-bars {
+    color: #333;
+}
+
+.model-content{
+    margin: 30px 20px 20px 20px;;
+}
+.model-footer {
+    display: inline-flex;
+}
+select{
+    margin: 20px 30px;
+    font-size: 20px;
+}
+select:hover {
+    color: rgb(150, 147, 143);
+    cursor: pointer;
+}
+
+
+.header__menu .modelShown {
+    z-index: 6;
+    position: relative;
+    position: absolute; 
+    margin: -48px -30px;
+    height: 700px;
+    bottom: -605px;
+    border: 2px solid rgb(195, 218, 231);
+    background-color: var(--while-color);
+    left: -275px;
+    right: 0px;
+    /* bottom: auto; */
+    display: none;
+    opacity: 0;
+    overflow-y: scroll;
+}
+.model-shown__dialog {
+    overflow: auto;
+}
+.header__menu .modelShown.active_open {
+    display: flex;
+    opacity: 1;
+}
+.header__menu .modelShown.active_close {
+    display: none;
+    opacity: 1;
+}
+.model-header{
+    font-size: 14px;
+    opacity: .95;
+    margin-top: -8px;
+    margin-right: -8px;
+    display: block;
+}
+
+.icon-model-header{
+    position: relative;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    left: 260px;
+}
+
+.icon-model-header:hover {
+    cursor: pointer;
+    color: black;
+    opacity: 50%;
+}
+
+.body-name__list a { 
+    padding: 10px;
+    list-style: none;
+    line-height: 5px;
+    text-decoration:none;
+    display: block;
+    color: var(--text-color);
+}
+.body-name__list :hover {
+    transform:translateX(1px);
+    color: rgb(150, 147, 143);
+}
+.body-name__list { 
+    list-style: none;
+}
+
+.body-name {
+    font-size: 22px;
+    margin: 0px 20px;
+    padding-top: 20px;
+}
+
+
+/* container */
+
+.container.active_open-register {
+    display: none;
+}
+.container{
+    position: absolute;
+    top: 69px;
+    bottom: 0;
+    right: 0; 
+    width: 100%;
+    /* overflow-x: hidden; */
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.fullPage-wrapper, .grid__row-car, .BikeVin, .energy, .charging-station, .suport, .footer-wrapper, .footer-wrapper {
+    scroll-snap-align: start;
+    scroll-margin-block: 0px;
+}
+::-webkit-scrollbar {
+    /* scroll-behavior: smooth; */
+    width: 0px; height:15px;
+    }
+
+/* banner */
+/* .fullPage-wrapper {
+    display: none;
+} */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.video-vinfast-banner {
+    position: relative;
+    margin-top: -200px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-vinfast-banner {
+    display: none;
+    display: inline-block;
+    position: relative;
+    margin-top: -185px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .myBanner {
+    display: none;
+  } */
+.fa-solid.fa-circle-chevron-left {
+    cursor: pointer;
+    left: 15px;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.fa-circle-chevron-right{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    right: 15px;
+    border-radius: 3px 0 0 3px;
+}
+
+  .car {
+    /* position: absolute; */
+    /* height: 102%; */
+    border-radius: 1%;
+    border: solid #fff 2px;
+    /* position: absolute; */
+    background-color: #fff;
+  }
+
+  .item-content--car,
+  .bikeContent {
+    position: relative;
+    margin-left: 20px;
+  }
+  img.imgCar {
+    display: flex;
+    margin: auto;
+  }
+  .car-info,
+  .bike_info {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0px 80px 20px 0px;
+  }
+  .grid__row-car {
+    padding: 10px 0px;
+    background-color: #efe4e4;
+  }
+  .grid__row-car :first-child {
+    margin-left: 5px;
+  }
+ .car-name,
+ .bike-name {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 0 0 8px;
+    line-height: 60px;
+ }
+ .car-slogan {
+    font-size: 18px;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0 0 16px;
+    line-height: 25px;
+    color: #92a0b2
+ }
+ .name-content-item {
+    font-size: 13px;
+    margin: 0 0 8px;
+ }
+ .content-item {
+    font-size: 20px;
+    margin: 0px 9px 0 0;
+ }
+ .car-price,
+ .bike-price {
+    font-size: 10px;
+    margin: 16px 0 16px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #3c3c3c;
+ }
+
+ .click-car {
+    padding: 25px 20px 25px 0px;
+ }
+ .deposit-car,
+ .deposit-bike,
+ .detait-policy,
+ .setTime-maintenance,
+ .aboutLearn_charger {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: #1464f4;
+    /* border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; */
+    border: 1px solid #1464f4;
+    border-radius: 3px;
+    padding: 15px 14%;
+    margin: 0px 5px;
+    width: 100%;
+ }
+ .aboutLearn_charger:hover {
+    background-color: #fff;
+    color: #1464f4;
+ }
+ .deposit-car:hover {
+    background-color: #fff;
+    color: #1464f4;
+ }
+ .deposit-bike:hover {
+    background-color: var(--while-color);
+    color: #1464f4;
+ }
+ .detail-car,
+ .detail-bike {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 15px 14%;
+    margin: 0px 5px;
+    text-align: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #1464f4;
+    border: 1px solid #1464f4;
+    border-radius: 3px;
+    width: calc(50% - 4px);
+    max-width: calc(50% - 4px);
+ }
+ .detail-car:hover{
+    background-color: #d7dbdf;
+ }
+ .detail-bike:hover {
+    background-color: #d7dbdf;
+ }
+
+ /* bike */
+ .BikeVin {
+    background-color: #efe4e4;
+ }
+ .header_motorBike-list {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    margin: 65px 350px 40px;
+    padding-top: 20px;
+ }
+ .header_motorBike-list a {
+    color: #000;
+ }
+ .main-bike a {
+    font-size: 22px;
+    color: #1464f4;
+ }
+.name_header-motorBike a,
+.bike_info-item a {
+    text-decoration: none;
+}
+
+.motorBike {
+    background-color: #fff;
+    height: 102%;
+}
+.imgBike {
+    width: 290px;
+    height: 230px;
+    margin-left: 25px;
+}
+.BikeImg {
+    max-width: 100%;
+    max-height: 100%;
+}
+.bike-name {
+    line-height: 30px;
+ }
+.bike_content-item {
+    font-size: 15px;
+}
+.name-bike-content-item {
+    font-size: 15px;
+    font-weight: 500;
+    color: #92a0b2
+}
+
+.deposit-bike {
+    line-height: 60px;
+    padding: 16px 12%;
+}
+.detail-bike {
+    padding: 15px 8%;
+}
+/* .high-class {
+    display: none;
+} */
+/* .mid-class {
+     display: none;
+} */
+.container.high-class.testRemove {
+    display: none;
+}
+/* .mid-class.actMid {
+    display: flex;
+} */
+/* .popular-class {
+    display: none;
+} */
+
+/* charger */
+.title-header{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.content-header {
+    margin: auto;
+    width: 900px;
+    font-size: 16px;
+}
+.content-header p{
+    word-wrap: break-word;
+    text-align: center;
+}
+.imgChargerCar,
+.imgChargerBike{
+    width: 100%;
+    height: 100%;
+}
+.imgCarCharger,
+.imgBikeCharger,
+.imgCharging-station {
+    max-width: 100%;
+    max-height: 100%;
+}
+.infoChargerCar,
+.infoChargerBike {
+        padding: 25px 20px 25px 0px;
+}
+.nameCharger {
+    display: flex;
+    justify-content: center;
+    margin-top: -15px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.detail-ChargerCar,
+.detail-ChargerBike {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 15px 8%;
+    margin: auto;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #1464f4;
+    border: 1px solid #1464f4;
+    border-radius: 3px;
+    width: calc(50% - 4px);
+    max-width: calc(35% - 4px);
+}
+.detail-ChargerCar:hover{
+    background-color: #1464f4;
+    color: #fff;
+}
+.detail-ChargerBike:hover {
+    background-color: #1464f4;
+    color: #fff;
+}
+/* .energy {
+    display: none;
+} */
+
+/* charger_station */
+/* .charging-station {
+    display: none;
+} */
+.imgStation {
+    display: flex;
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    margin-top: 20%;
+} 
+.introduce_Charger {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+}
+.name-introdice {
+    max-width: 270px;
+    line-height: 45px;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+}
+.name-introdice h2 {
+    word-wrap: break-word;
+}
+.content_intro {
+    max-width: 500px;
+    font-size: 20px;
+    line-height: 20px;
+}
+.content_intro p {
+    word-wrap: break-word;
+}
+.aboutLearn_charger {
+    line-height: 70px;
+    padding: 18px 10%;
+}
+
+/* servire */
+.imgService-content {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 80%;
+    float: right;
+    /* display: none; */
+}
+.service{
+    position: absolute;
+    top: auto;
+    left: 160px;
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+    max-width: 435px;
+    /* display: none; */
+}
+.service-img {
+    width: 100%;
+    height: 630px;
+}
+.title-service {
+    font-size: 40px;
+    font-weight: 100;
+}
+.subTitleService,
+.subTitlePolicy,
+.mane-maintenance {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 200;
+}
+.title-policy,
+.title-maintenance {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.setTime-maintenance {
+    line-height: 70px;
+    padding: 18px 10%;
+    margin: 0px;
+}
+.detait-policy {
+    line-height: 70px;
+    padding: 18px 16.5%;
+    margin: 0px;
+}
+.detait-policy:hover{
+    border: 1px solid #1464f4;
+    border-radius: 3px;
+    background-color: var(--while-color) ;
+    color: #1464f4;
+}
+
+.setTime-maintenance:hover{
+    border: 1px solid #1464f4;
+    border-radius: 3px;
+    background-color: var(--while-color) ;
+    color: #1464f4;
+}
+
+/* footer */
+.grid-footer img {
+    width: 90%;
+}
+.content-wrapper {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #f0f3f3;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+.container-box {
+    display: contents;
+    padding: 0 30px;
+}
+.info {
+    display: inline-block;
+}
+.info p {
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: -.02em;
+    color: #3c3c3c;
+    margin-bottom: 16px;
+    line-height: 25px;
+    font-size: 18px;
+}
+.Tax-code,.address {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: -.02em;
+    color: #3c3c3c;
+    margin-bottom: 16px;
+}
+.Tax-code span {
+    font-weight: 500;
+}
+.address span {
+    font-weight: 500;
+}
+.menu__vin {
+    padding: 14px;
+    font-size: 19px;
+}
+.hot-new a {
+    text-decoration: none;
+    color: #000;
+}
+.clause {
+    display: inline-block;
+    width: max-content;
+}
+.hotline-tittle {
+    padding: 14px;
+    font-size: 19px;
+}
+.hotline  {
+    margin: 10px 0;
+    font-size: 19px;
+}
+.icon-hotline {
+    margin-bottom: 10px;
+}
+.mail{
+    margin: 20px 0;
+    text-decoration: none;
+    font-size: 19px;
+}
+.icon-hotline,
+.icon-mail {
+    margin: 0 14px;
+    text-decoration: none;
+    color: #000;
+}
+.mail span, .hotline span {
+    color: #1464f4;
+}
+.vin-contac {
+    font-size: 19px;
+    padding: 10px 10px 20px 10px;
+}
+.vin-connect {
+    padding: 10px 10px;
+    font-size: 19px;
+}
+.connect-title {
+    margin-bottom: 10px;
+}
+.social {
+    display: flex;
+    flex-direction: column;
+}
+a.social-item {
+    text-decoration: none;
+    margin: 10px;
+    color: #000;
+}
+.column-3__footer{
+    display: inline-flex;
+}
+.hv:hover {
+    text-decoration: underline;
+}
+.cs:hover {
+    cursor: pointer;
+}
+
+.Register__infomation {
+    margin-top: -20px;
+}
+.title_Register {
+    padding: 14px;
+    font-size: 19px;
+}
+p.title__register {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    letter-spacing: -.02em;
+    color: #3c3c3c;
+    font-weight: 400;
+    width: 85%;
+}
+.form__email {
+    display: flex;
+    padding: 0px 10px;
+    font-size: 16px;
+}
+input.import__email {
+    font-size: 25px;
+    padding: 10px 0xp;
+    border: 1px solid CornflowerBlue;
+    border-radius: 4px;
+    display: block;
+}
+input[type="email"]::placeholder {
+    text-align: center;
+}
+::placeholder { 
+    align-items: center;
+    justify-content: space-between;
+    color: deeppink;
+    font-size: 18px;
+}
+a.RegisterWithEmail {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: -28px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: #1464f4;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 3% 5px 3%;
+}
+a.RegisterWithEmail:hover {
+    background-color: #fff;
+    color: #1464f4;
+}
+.notification {
+    padding: 0px 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -.02em;
+    color: #3c3c3c;
+    font-weight: 400;
+    width: 87%;
+}
+.content__notification {
+    text-transform: uppercase;
+}
+.bct-wrapper {
+    margin-left: -60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.copy-right {
+    margin-left: -90px;
+    font-size: 14px;
+}
+
+.Ecosystem {
+    margin-top: 20px;
+    padding: 0px 4px;
+    font-size: 15px;
+    margin-left: -100%;
+    color: #000;
+}
+.ecosystem-item {
+    text-decoration: none;
+    padding: 10px 5px;
+}
+.ecosystem-item-name {
+    padding: 10px 5px;
+    text-decoration: none;
+    padding-right: 20px;
+}
+.ecosystem-item:hover {
+    color: #1464f4;
+}
+
+
+
+
+

@@ -1,0 +1,2 @@
+(function($,Drupal){Drupal.behaviors.ht_comment_js={attach:function(context,settings){if($("body:not('.ht_comment_js')").length){ht_custom_loading_modal('body');if($('.big-cmt-wrapper').length){ht_cmt_handler();}
+$('body').addClass('ht_comment_js');}}};})(jQuery,Drupal);

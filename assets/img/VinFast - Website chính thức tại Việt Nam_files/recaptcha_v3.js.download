@@ -1,0 +1,6 @@
+(function($,Drupal){'use strict';function updateTokenElement(element){if(typeof grecaptcha==='undefined'){var timer=setInterval(function(){if(typeof grecaptcha!=='undefined'||!element){clearInterval(timer);if(element){doUpdateTokenElement(element);}}},500);}
+else{doUpdateTokenElement(element);}}
+function doUpdateTokenElement(element){grecaptcha.ready(function(){if(!element){return;}
+var $element=$(element);grecaptcha.execute($element.data('recaptchaV3SiteKey'),{action:$element.data('recaptchaV3Action')}).then(function(token){$element.val(token);$element.trigger('change');});});}
+Drupal.behaviors.reCaptchaV3={attach:function(context){$('.recaptcha-v3-token',context).once('recaptcha-v3-token').each(function(){var element=this;updateTokenElement(element);var interval=setInterval(function(){if(!element){clearInterval(interval);}
+else{updateTokenElement(element);}},90000);});}};})(jQuery,Drupal);

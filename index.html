@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="./https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/acc.css">
+    <link rel="stylesheet" href="./assets/fonts/fonts/css/all.min.css">
+</head>
+<body>
+    <div class="web">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <div class="header__nav-main">
+                        <div class="header-logo">
+                                <a href="">
+                                    <img class="img-logo" src="./assets/img/VinFast-logo.svg" alt="VinFast">
+                                </a>
+                        </div>
+                        <div class="header-list">
+                            <ul class="title">
+                                <li class="title-list">
+                                    <a href="#" class="title-list-link">Giới thiệu</a>
+                                </li>
+                                <li class="title-list">
+                                    <a href="#" class="title-list-link">Ô tô</a>
+                                </li>
+                                <li class="title-list">
+                                    <a href="#" class="title-list-link">Xe máy điện</a>
+                                </li>
+                                <li class="title-list">
+                                    <a href="#" class="title-list-link">Dịch vụ</a>
+                                </li>
+                                <li class="title-list">
+                                    <a href="#" class="title-list-link">Pin và trạm sạc</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-list">
+                            <div class="hover-list header-list--node header__user-login">
+                                <a href="#" class="account" onclick="loginAcc()">
+                                    <i class="fa-solid fa-user header-list--item">Login</i>
+                                </a>
+                            </div>
+                            <div class="hover-list header-list--node header__user-logout">
+                                <a href="" class="account">
+                                    <i class="fa-solid fa-right-from-bracket header-list--item">Log Out</i>
+                                </a>
+                            </div>
+                            <div class="hover-list header-list--node header__user-login">
+                                <a href="#" class="account" onclick="openRegister()">
+                                    <i class="fa-solid fa-pen-to-square header-list--item"> Register </i>
+                                </a>
+                            </div>
+                            <div class="header__menu">   
+                                <div onclick="menuToggle_open()">
+                                    <a href="#">
+                                            <i class="fa-solid fa-bars click_menu"></i>
+                                    </a>         
+                                </div>
+                                <div class="modelShown">
+                                    <div class="model-shown__dialog">
+                                        <div class="model-content">
+                                            <div class="model-header" onclick="menuToggle_close()">
+                                                <button class = "icon-model-header">
+                                                    <span>
+                                                        <i class="fa-sharp fa-solid fa-xmark"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="model-body">
+                                                <div class="d-none">
+                                                    <div class="submenu-block">
+                                                        <p class="body-name">Tiện ích</p>
+                                                        <ul class="body-list">
+                                                            <li class="body-name__list">
+                                                                <p>
+                                                                    <a href="#" onclick="">So sánh xe</a>
+                                                                </p>
+                                                            </li>
+                                                            <li class="body-name__list">
+                                                                <p>
+                                                                    <a href="#" onclick="">Dự đoán chi phí lăn bánh</a>
+                                                                </p>
+                                                            </li>
+                                                            <li class="body-name__list">
+                                                                <p>
+                                                                    <a href="#" onclick="">Dự toán vay trả góp</a>
+                                                                </p>
+                                                            </li>
+                                                            <li class="body-name__list">
+                                                                <p>
+                                                                    <a href="#" onclick="">Thẩm định vay trả góp</a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="submenu-block">
+                                                        <p class="body-name">Tin tức</p>
+                                                        <ul class="body-list">
+                                                            <li class="body-name__list">
+                                                                <p>
+                                                                    <a href="#" onclick="">Công ty</a>
+                                                                </p>
+                                                            </li>
+                                                            <li class="body-name__list">
+                                                                <p>
+                                                                    <a href="#" onclick="">Cộng đồng</a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="submenu-block">
+                                                        <p class="body-name">Hỗ trợ</p>
+                                                        <ul class="body-list">
+                                                            <li class="body-name__list">
+                                                                <p>
+                                                                    <a href="#" onclick="">Showroom & trạm sạc</a>
+                                                                </p>
+                                                            </li>
+                                                            <li class="body-name__list">
+                                                                <p>
+                                                                    <a href="#" onclick="">Câu hỏi thường gặp</a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="submenu-block">
+                                                        <p class="body-name">Mua sắm</p>
+                                                        <ul class="body-list">
+                                                            <li class="body-name__list">
+                                                                <p>
+                                                                    <a href="#" onclick="">Đặt mua sạc</a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="submenu-block">
+                                                        <p class="body-name">Thảo luận</p>
+                                                        <ul class="body-list">
+                                                            <li class="body-name__list">
+                                                                <p>
+                                                                    <a href="#" onclick="">VinFast toàn cầu</a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="d-block"></div>
+                                            </div>
+                                            <div class="model-footer">
+                                                <p class="body-name">Lựa chọn quốc gia
+                                                    <select class="select-nation" id="">
+                                                        <option>Việt Nam</option>
+                                                        <option>US</option>
+                                                        <option>UK</option>
+                                                        <option>Italy</option>
+                                                    </select>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="container homeSwiper">
+            <div class="fullPage-wrapper">
+                <div class="swiper-silde banner">
+                    <!-- <video src="./assets/img/VinFast-VF8-VF9-electric-SUV-cars.mp4" class="video-vinfast-banner" id="slide"></video> -->
+                    <!-- <img src="./assets/img/slide-home.jpg" class="video-vinfast-banner" id="slide" alt=""> -->
+                    <video playsinline autoplay muted loop class="video-vinfast-banner" class="myBanner" id="slide" poster="./">
+                        <source src="./assets/img/VinFast-VF8-VF9-electric-SUV-cars.mp4" type="video/mp4">
+                    </video>
+                    <i class="fa-solid fa-circle-chevron-left" onclick="prev()"></i>
+                    <i class="fa-solid fa-circle-chevron-right" onclick="next()"></i>
+                </div>
+            </div>
+            <div class="grid__row-car">
+                        <div class="grid__column-3 myBannerCar">
+                            <div class="swiper-silde car">
+                                <div class="imgCar">
+                                    <img src="./assets/img/VF5+.png" alt="err">
+                                </div>
+                                <div class="item-content--car">
+                                    <p class="car-name">VF 5 Plus</p>
+                                    <p class="car-slogan">Kiến tạo xu thế mới</p>
+                                    <div class="car-info">
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Dòng xe</span>
+                                            <p class="content-item"> SUV</p>
+                                        </div>
+            
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Số chỗ ngồi</span>
+                                            <p class="content-item">5 chỗ</p>
+                                        </div>
+            
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Quãng đường</span>
+                                            <p class="content-item">>300km</p>
+                                        </div>
+                                    </div>
+                                    <p class="car-price">458.000.000 VND</p>
+                                    <div class="click-car">
+                                        <a href="" class="deposit-car">Đặt cọc</a>
+                                        <a href="" class="detail-car">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-3 myBannerCar">
+                            <div class="swiper-silde car">
+                                <div class="imgCar">
+                                    <img src="./assets/img/LUX A2.0.png" alt="">
+                                </div>
+                                <div class="item-content--car">
+                                    <p class="car-name">LUX A2.0</p>
+                                    <p class="car-slogan">Tận hưởng từng khoảnh khắc</p>
+                                    <div class="car-info">
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Dòng xe</span>
+                                            <p class="content-item">SEDAN</p>
+                                        </div>
+            
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Số chỗ ngồi</span>
+                                            <p class="content-item">5 chỗ</p>
+                                        </div>
+            
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Quãng đường</span>
+                                            <p class="content-item">7L/100km</p>
+                                        </div>
+                                    </div>
+                                    <p class="car-price">1.115.120.000 VND</p>
+                                    <div class="click-car">
+                                        <a href="" class="deposit-car">Đặt cọc</a>
+                                        <a href="" class="detail-car">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-3 myBannerCar">
+                            <div class="swiper-silde car">
+                                <div class="imgCar">
+                                    <img src="./assets/img/VF8.png" alt="">
+                                </div>
+                                <div class="item-content--car">
+                                    <p class="car-name">VF 8</p>
+                                    <p class="car-slogan">Hơn cả sự hứng khởi</p>
+                                    <div class="car-info">
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Dòng xe</span>
+                                            <p class="content-item">SUV</p>
+                                        </div>
+            
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Số chỗ ngồi</span>
+                                            <p class="content-item">5 chỗ</p>
+                                        </div>
+            
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Quãng đường</span>
+                                            <p class="content-item">420km</p>
+                                        </div>
+                                    </div>
+                                    <p class="car-price">1.129.000.000 VND</p>
+                                    <div class="click-car">
+                                        <a href="" class="deposit-car">Đặt cọc</a>
+                                        <a href="" class="detail-car">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="grid__column-3 myBannerCar">
+                            <div class="swiper-silde car">
+                                <div class="imgCar">
+                                    <img src="./assets/img/VF e34.png" alt="">
+                                </div>
+                                <div class="item-content--car">
+                                    <p class="car-name">VF e34</p>
+                                    <p class="car-slogan">Cùng bạn bứt phá mọi giới hạn</p>
+                                    <div class="car-info">
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Dòng xe</span>
+                                            <p class="content-item">SUV</p>
+                                        </div>
+            
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Số chỗ ngồi</span>
+                                            <p class="content-item">5 chỗ</p>
+                                        </div>
+            
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Quãng đường</span>
+                                            <p class="content-item">285km</p>
+                                        </div>
+                                    </div>
+                                    <p class="car-price">710.000.000 VND</p>
+                                    <div class="click-car">
+                                        <a href="" class="deposit-car">Đặt cọc</a>
+                                        <a href="" class="detail-car">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-3 myBannerCar">
+                            <div class="swiper-silde car">
+                                <div class="imgCar">
+                                    <img src="./assets/img/VF9.png" alt="">
+                                </div>
+                                <div class="item-content--car">
+                                    <p class="car-name">VF 9</p>
+                                    <p class="car-slogan">Hơn cả sự tận hưởng</p>
+                                    <div class="car-info">
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Dòng xe</span>
+                                            <p class="content-item">SUV</p>
+                                        </div>
+            
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Số ghế ngồi</span>
+                                            <p class="content-item">6-7 chỗ</p>
+                                        </div>
+            
+                                        <div class="car-info--item">
+                                            <span class="name-content-item">Quãng đường</span>
+                                            <p class="content-item">438km</p>
+                                        </div>
+                                    </div>
+                                    <p class="car-price">4.191.000.000 VND</p>
+                                    <div class="click-car">
+                                        <a href="" class="deposit-car">Đặt cọc</a>
+                                        <a href="" class="detail-car">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+            </div>
+            
+            <div class="BikeVin high-class">
+                    <div class="swiper-silde header_motorBike">
+                        <ul class="header_motorBike-list">
+                            <li class="name_header-motorBike main-bike">
+                                <a href="#">Xe máy điện cao cấp</a>
+                            </li>
+                            <li class="name_header-motorBike">
+                                <a href="#" onclick= "test11()">
+                                Xe máy điện trung cấp
+                                </a>
+                            </li>
+                            <li class="name_header-motorBike">
+                                <a href="#">
+                                            Xe máy điện phổ thông
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid__row-bike">
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/Vento.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">VENTO</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 100km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 80km/h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 56.350.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/VentoS.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">VENTO S</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 160km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 89km/h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 56.000.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/Theon.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">THEON</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 101km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 90km/h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 63.900.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/TheonS.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">THEON S</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 150km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 99km/h/a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 69.900.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="BikeVin mid-class">
+                    <div class="swiper-silde header_motorBike">
+                        <ul class="header_motorBike-list">
+                            <li class="name_header-motorBike">
+                                <a href="#">Xe máy điện cao cấp</a>
+                            </li>
+                            <li class="name_header-motorBike main-bike">
+                                <a href="#">
+                                Xe máy điện trung cấp
+                                </a>
+                            </li>
+                            <li class="name_header-motorBike">
+                                <a href="#">
+                                Xe máy điện phổ thông
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid__row-bike">
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/Feliz.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">FELIZ</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 100km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 60km/h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 24.000.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/FelizS.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">FELIZ S</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 198km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 78km/h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 29.900.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/KlaraS(2022).png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">KLARA S (2022)</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 194km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 78km/h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 36.900.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/KlaraS.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">KLARA S</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 120km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 48km/h/a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 39.900.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="BikeVin popular-class">
+                    <div class="swiper-silde header_motorBike">
+                        <ul class="header_motorBike-list">
+                            <li class="name_header-motorBike">
+                                <a href="#">Xe máy điện cao cấp</a>
+                            </li>
+                            <li class="name_header-motorBike">
+                                <a href="#">
+                                Xe máy điện trung cấp
+                                </a>
+                            </li>
+                            <li class="name_header-motorBike main-bike">
+                                <a href="#">
+                                            Xe máy điện phổ thông
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid__row-bike">
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/evo-200-lite.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">EVO 200 LITE</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 205km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 49km/h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 22.000.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/Ludo.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">LUDO</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 70km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 35km/h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 12.900.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/Impes.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">IMPES</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 70km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 49km/h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 14.900.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4">
+                            <div class="motorBike">
+                                <div class="imgBike">
+                                    <img src="./assets/img/Tempest.png" alt="" class="BikeImg">
+                                </div>
+                                <div class="bikeContent">
+                                    <p class="bike-name">TEMPEST</p>
+                                    <div class="bike_item">
+                                        <div class="bike_info">
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Quãng đường</span>
+                                                <p class="bike_content-item">Lên tới 80km /1 lần sạc</p>
+                                            </div>
+                                            <div class="bike_info-item">
+                                                <span class="name-content-item name-bike-content-item">Tốc độ</span>
+                                                <p class="bike_content-item">Lên tới 49km/h/a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bike-price">Từ 19.250.000 VNĐ</p>
+                                    <div class="click-bike">
+                                        <a href="" class="deposit-bike">Mua ngay</a>
+                                        <a href="" class="detail-bike">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="energy">
+                <div class="header-energy">
+                    <h2 class="title-header">Pin và trạm sạc</h2>
+                    <div class="content-header">
+                        <p> Với phương châm luôn đặt lợi ích Khách hàng lên hàng đầu, VinFast áp dụng chính sách cho thuê pin độc đáo, ưu việt và khác biệt với tất cả các mô hình cho thuê pin từ trước tới nay trên thế giới.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                        <div class="imgChargerCar">
+                            <img src="./assets/img/image-pin-tramsac-oto_1666149988.png" alt="#" class="imgCarCharger">
+                            <div class="infoChargerCar">
+                                <p class="nameCharger">Pin và sạc ô tô</p>
+                                <a href="#" class="detail-ChargerCar">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="imgChargerBike">
+                            <img src="./assets/img/image-pin-tramsac-xmd_1666150010.png" alt="#" class="imgBikeCharger">
+                            <div class="infoChargerBike">
+                                <p class="nameCharger">Pin và sạc xe máy điện</p>
+                                <a href="#" class="detail-ChargerBike">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charging-station">
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                        <div class="imgCharging-station">
+                            <img src="./assets/img/thiet-bi-sac-di-dong_1666150099.png" alt="" class="imgStation">
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="introduce_Charger">
+                            <div class="info_introduce">
+                                <div class="name-introdice">
+                                    <h2>
+                                        Thiết bị sạc di động                            
+                                    </h2>
+                                </div>
+                                <div class="content_intro">
+                                    <p> VinFast cung cấp đa dạng giải pháp sạc để đáp ứng nhu cầu sử dụng của khách hàng một cách thuận tiện nhất.</p>
+                                    <a href="" class="aboutLearn_charger">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suport">
+                <div class="service">
+                    <div class="warranty-service">
+                        <h2 class="title-service">Bảo hành & dịch vụ</h2>
+                        <p class="subTitleService"> VinFast đã đầu tư nghiêm túc và bài bản để phát triển hệ thống Showroom, Nhà phân phối và xưởng dịch vụ rộng khắp, đáp ứng tối đa nhu cầu của Khách hàng.</p>
+                    </div>
+                    <div class="policy">
+                        <h2 class="title-policy">Chính sách bảo hành</h2>
+                        <p class="subTitlePolicy">Bảo hành vượt trội đến 10 năm</p>
+                        <a href="#" class="detait-policy">Xem chi tiết</a>
+                    </div>
+                    <div class="maintenance">
+                        <h2 class="title-maintenance">Đặt lịch bảo dưỡng</h2>
+                        <p class="mane-maintenance">Lên lịch sửa chữa và bảo dưỡng xe</p>
+                        <a href="" class="setTime-maintenance">Đặt lịch bảo dưỡng</a>
+                    </div>
+                </div>
+                <div class="imgService-content">
+                    <img src="./assets/img/bao-hanh-dich-vu-img_1666150271.png" alt="" class="service-img">
+                </div>
+            </div>
+            
+            <footer class="footer-wrapper">
+                <div class="content-wrapper">
+                    <div class="container-box">
+                        <div class="grid__column-3 grid-footer">
+                            <img src="./assets/img/vin_logo_hoz.png" alt="">
+                            <div class="info">
+                                <P>CÔNG TY TNHH KINH DOANH THƯƠNG MẠI VÀ DỊCH VỤ VINFAST</P>
+                                <div class="Tax-code">
+                                    <span>MST /MSDN: </span>
+                                    "0108926276 do Sở KHĐT TP Hà Nội cấp lần đầu ngày 01/10/2019 và các lần thay đổi tiếp theo."
+                                </div>
+                                <div class="address">
+                                    <span>Địa chỉ trụ sở chính: </span>
+                                    " Số 7, đường Bằng Lăng 1, Khu đô thị sinh thái Vinhomes Riverside, Phường Việt Hưng, Quận Long Biên, Thành phố Hà Nội, Việt Nam"
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid__column-3 column-3__footer">
+                            <div class="grid__column-2">
+                                <div class="menu__footer">
+                                    <div class="hv cs menu__vin about-vinfast">Về VinFast</div>
+                                    <div class="hv cs menu__vin about-vingroup">Về VinGroup</div>
+                                    <div class="hv cs menu__vin about-community__vinfast">Cộng đồng VinFast</div>
+                                    <div class="cs menu__vin hot-new">
+                                        <a href="">
+                                            Tin tức
+                                        </a>
+                                    </div>
+                                    <div class="hv cs menu__vin endow">Ưu đãi</div>
+                                    <div class="hv cs menu__vin showroom">Showroom && đại lý</div>
+                                    <div class="cs menu__vin clause">Điều khoản chính sách</div>
+                                </div>
+                            </div>
+                            <div class="grid__column-2">
+                                <div class="menu-conect">
+                                    <div class="hotline-email">
+                                        <div class="hotline-tittle">
+                                            HOTLINE
+                                        </div>
+                                        <div class="hotline">
+                                            <a href="" class="icon-hotline">
+                                                <i class="fa-solid fa-phone-volume"></i>
+                                            </a>
+                                            <span class="cs">1900 23 23 89</span>
+                                        </div>
+                                        <div class="mail">
+                                            <a href="" class="icon-mail">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </a>
+                                            <span class="cs">sp@vin.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="vin-contac hv cs">Liên hệ</div>
+                                    <div class="vin-connect">
+                                        <div class="connect-title">
+                                            Kết nối với VinFast
+                                        </div>
+                                        <div class="social">
+                                            <a href="" class="social-item">
+                                                <i class="fa-brands fa-facebook"></i>
+                                                Facebook
+                                            </a>
+                                            <a href="" class="social-item">
+                                                <i class="fa-brands fa-youtube"></i>
+                                                YouTube
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__column-3">
+                            <div class="Register__infomation">
+                                <div class="title_Register">
+                                    <p>ĐĂNG KÝ NHẬN THÔNG TIN</p>
+                                    <p class="title__register">
+                                        ĐĂNG KÍ NHẬN THÔNG TIN CHƯƠNG TRÌNH KHUYẾN MÃI ,DỊCH VỤ TỪ VINFAST
+                                    </p>
+                                </div>
+                                <div class="form__email">
+                                    <input type="email" placeholder="Nhập email của bạn" class="import__email">
+                                    <a href="" class="RegisterWithEmail">Đăng ký</a>
+                                </div>
+                                <div class="notification">
+                                    <p class="content__notification">Bằng cách đăng ký ,quý khách đã đọc,hiểu và đồng ý với
+                                        <a href="" target="_blank">Chính sách quyền riêng tư</a>
+                                        của VinFast
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bct-wrapper">
+                                <a href="http://online.gov.vn/Home/WebDetails/78130">
+                                    <img src="./assets/img/CheckBlue.svg" alt="Logo bộ công thương">
+                                </a>
+                                <div class="copy-right">
+                                    <span>
+                                        VinFast. ALL right reseved
+                                        <br>
+                                        @Copyright 2020
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="Ecosystem">
+                                <a href="" class="ecosystem-item-name">Hệ sinh thái:</a>
+                                <a href="" class="ecosystem-item">Vinhomes</a>
+                                <a href="" class="ecosystem-item">Vinmec</a>
+                                <a href="" class="ecosystem-item">Vsmart</a>
+                                <a href="" class="ecosystem-item">Vinpearl</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- form validation -->
+    <div class="register">
+        <form action="" method="POST" class="form" id="form-1">
+            <h3 class="heading">Register an account</h3>
+            <p class="desc">Cùng nhau phát triển ❤️</p>
+      
+            <div class="spacer"></div>
+      
+            <div class="form-group">
+              <label for="fullname" class="form-label">Full Name</label>
+              <input id="fullname" name="fullname" type="text" placeholder="VD: Đức Hải" class="form-control">
+              <span class="form-message"></span>
+            </div>
+      
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" type="text" placeholder="VD: xxx@gmail.com" class="form-control">
+              <span class="form-message"></span>
+            </div>
+      
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <input id="password" name="password" type="password" placeholder="Enter password" class="form-control">
+              <span class="form-message"></span>
+            </div>
+      
+            <div class="form-group">
+              <label for="password_confirmation" class="form-label">Enter password again</label>
+              <input id="password_confirmation" name="password_confirmation" placeholder="Enter password again" type="password" class="form-control">
+              <span class="form-message"></span>
+            </div>
+      
+            <button class="form-submit">Register</button>
+          </form>
+    </div>
+
+    <div class="login">
+        <form action="" method="POST" class="form" id="form-2">
+            <h3 class="heading">Login</h3>
+            <p class="desc">Cùng nhau phát triển ❤️</p>
+      
+            <div class="spacer"></div>
+      
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" type="text" placeholder="VD: xxx@gmail.com" class="form-control">
+              <span class="form-message"></span>
+            </div>
+      
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <input id="password" name="password" type="password" placeholder="Enter password" class="form-control">
+              <span class="form-message"></span>
+            </div>
+      
+            <button class="form-submit">Login</button>
+          </form>
+    </div>
+    <script type="text/javascript" src="./assets/js/dropMenu.js"></script>
+    <script type="text/javascript" src="./assets/js/slide.js"></script>
+    <script type="text/javascript" src="./assets/js/acc.js"></script>
+</body>
+
+</html>
